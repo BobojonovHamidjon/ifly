@@ -1,0 +1,15 @@
+@import "tailwindcss";
+.font-mono{
+  font-family: Poppins, system-ui;
+}
+.swiper-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
