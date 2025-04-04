@@ -47,7 +47,7 @@ const Cite = () => {
   const closeModal = () => setModalOpen(false);
 
   return (
-    <div className="container mx-auto py-20 px-5 font-mono">
+    <div className="container mx-auto py-20 px-5 font-mono " id='cite'>
       <h1 className="text-center text-4xl font-bold mb-8" data-aos="fade-up">
         Davlatlarni o'rganing
       </h1>
