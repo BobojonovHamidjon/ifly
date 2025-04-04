@@ -6,13 +6,13 @@ const ContactModal = ({ isOpen, onClose }) => {
   return (
     <div
       className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50"
-      onClick={onClose} // Modal tashqarisini bosganda yopish
+      onClick={onClose} 
     >
       <div
         className="bg-white p-6 rounded-2xl w-[450px] shadow-2xl relative"
-        onClick={(e) => e.stopPropagation()} // Modal ichini bosganda yopilmasligi uchun
+        onClick={(e) => e.stopPropagation()} 
       >
-        {/* Yopish tugmasi */}
+
         <button
           className="absolute top-4 right-4 text-black text-2xl font-bold bg-orange-500 w-10 h-10 flex items-center justify-center rounded-[6px]"
           onClick={onClose}
@@ -21,12 +21,11 @@ const ContactModal = ({ isOpen, onClose }) => {
           ✖
         </button>
 
-        {/* Sarlavha */}
+      
         <h2 className="text-3xl font-bold text-center mb-6 text-black">
           Send a Message!
         </h2>
 
-        {/* Forma */}
         <h3 className="text-black">Full Name</h3>
         <form className="space-y-4">
           <input

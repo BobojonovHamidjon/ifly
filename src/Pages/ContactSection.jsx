@@ -23,7 +23,7 @@ const ContactSection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can handle form submission here (e.g., send data to API or log data)
+   
     console.log(formData);
   };
 

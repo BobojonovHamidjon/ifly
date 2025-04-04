@@ -7,7 +7,7 @@ import { FaHotel, FaRoute } from "react-icons/fa";
 
 import { SwiperSlide, Swiper } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay,  Pagination } from "swiper/modules";
 
 
 const features = [
@@ -94,24 +94,24 @@ function About() {
         <h2 className="text-4xl text-center mb-16 text-orange-500 font-bold">Mijozlarimiz nima deyishadi</h2>
         <Swiper
           modules={[ Pagination, Autoplay]}
-          spaceBetween={20}  // Adjust space for smaller screens
-          slidesPerView={1}  // Default for small screens (mobile)
+          spaceBetween={20} 
+          slidesPerView={1}  
           loop={true}
           pagination={{ clickable: true }}
           autoplay={{
-            delay: 3000,  // Slide will auto change every 3 seconds
-            disableOnInteraction: false,  // Auto-play won't be disabled after interaction
+            delay: 3000,  
+            disableOnInteraction: false,  
           }}
           className="mySwiperEmpty"
           breakpoints={{
             640: {
-              slidesPerView: 1,  // 1 slide per view on small screens
+              slidesPerView: 1,  
             },
             768: {
-              slidesPerView: 2,  // 2 slides per view on medium screens
+              slidesPerView: 2,  
             },
             1024: {
-              slidesPerView: 3,  // 3 slides per view on large screens
+              slidesPerView: 3,  
             },
           }}
         >

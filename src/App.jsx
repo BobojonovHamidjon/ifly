@@ -2,10 +2,11 @@ import React, { useEffect } from 'react'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
 import Excursions from './Pages/Excursions'
-import City from './Pages/City'
+
 import Aos from 'aos'
 import About from './Pages/About'
 import ContactSection from './Pages/ContactSection'
+import Cite from './Pages/City'
 
 const App = () => {
   useEffect(() => {
@@ -19,10 +20,11 @@ const App = () => {
     <div>
       <Header/>
       <Excursions/>
-      <City/>
+      <Cite/>
       <About/>
       <ContactSection/>
       <Footer/>
+      
       
       
     </div>

@@ -39,7 +39,7 @@ const toursData = [
   }
 ];
 
-const City = () => {
+const Cite = () => {
   const [selectedTour, setSelectedTour] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -108,4 +108,4 @@ const City = () => {
   );
 };
 
-export default City;
+export default Cite;

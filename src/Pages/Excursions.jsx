@@ -41,8 +41,8 @@ const Excursions = () => {
         </h2>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={20} // Adjust space for smaller screens
-          slidesPerView={1} // Default for small screens (mobile)
+          spaceBetween={20} 
+          slidesPerView={1} 
           loop={true}
           navigation
           pagination={{ clickable: true }}
@@ -52,15 +52,15 @@ const Excursions = () => {
           }}
           breakpoints={{
             640: {
-              slidesPerView: 1, // Mobile
+              slidesPerView: 1,
               spaceBetween: 20,
             },
             768: {
-              slidesPerView: 2, // Tablet
+              slidesPerView: 2,
               spaceBetween: 20,
             },
             1024: {
-              slidesPerView: 3, // Desktop
+              slidesPerView: 3, 
               spaceBetween: 30,
             },
           }}
@@ -73,9 +73,9 @@ const Excursions = () => {
                   backgroundImage: `url(${tour.image})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
-                  height: '300px',  // Fixed height for all slides
-                  width: '100%',     // Full width of the container
-                  aspectRatio: '1',   // Enforces equal width and height
+                  height: '300px',  
+                  width: '100%',    
+                  aspectRatio: '1', 
                 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/80"></div>
@@ -95,7 +95,7 @@ const Excursions = () => {
         </Swiper>
       </div>
 
-      {/* Contact Modal */}
+     
       <ContactModal isOpen={modalOpen} onClose={closeModal} />
     </div>
   );
