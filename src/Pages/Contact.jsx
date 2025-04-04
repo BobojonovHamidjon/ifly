@@ -3,8 +3,9 @@ import ContactModal from './ContactModal'
 
 const Contact = () => {
   return (
-    <div>
-        <ContactModal isOpen={modalOpen} onClose={closeModal} />
+    <div> 
+      <ContactModal isOpen={modalOpen} onClose={closeModal} />
+       
     </div>
   )
 }

@@ -242,7 +242,8 @@ const Header = () => {
 </div>
 
 </div>
-{modalOpen && <ContactModal closeModal={() => setModalOpen(false)} />}
+
+<ContactModal isOpen={modalOpen} onClose={closeModal} />
 {menuModalOpen && <MenuModal closeModal={() => setMenuModalOpen(false)} />}
     </header>
   )
