@@ -12,13 +12,18 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: 'en',
-    debug: true,
-    lng: 'uz',
+    debug: true, 
+    lng: i18n.language,
     resources: { 
       uz: { translation: uz },
       ru: { translation: ru },
       eng: { translation: eng },
     },
+    detection:{
+      order: ['localStorage', 'navigator'],
+      caches: ['localStorage'],
+      lookupLocalStorage: 'language',
+  }
   });
 
 export default i18n;
