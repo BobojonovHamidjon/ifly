@@ -36,9 +36,9 @@ const Excursions = () => {
   ];
 
   return (
-    <div className="bg-orange-500 dark:bg-gray-900 dark:text-white w-full h-auto py-20" id="tours">
+    <div className="bg-gray-900 dark:text-white w-full h-auto py-20" id="tours">
       <div className="container mx-auto px-5">
-        <h2 className="text-5xl font-bold text-center dark:text-orange-500 text-white mb-14">
+        <h2 className="text-5xl font-bold text-center text-white mb-14">
        {t("excursions.text")}
         </h2>
         <Swiper

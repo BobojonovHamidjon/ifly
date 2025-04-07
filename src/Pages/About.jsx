@@ -46,10 +46,10 @@ const features = [
 ];
 
   return (
-    <section className="bg-orange-500 dark:bg-gray-900 py-16 px-4 sm:px-6 lg:px-8" id="about">
+    <section className=" bg-gray-900 py-16 px-4 sm:px-6 lg:px-8" id="about">
       <div className="max-w-7xl mx-auto text-center" data-aos="fade-up">
-        <h2 className="text-3xl font-extrabold dark:text-orange-500 text-white sm:text-4xl">{t("about.about")}</h2>
-        <p className="mt-4 text-xl text-white dark:text-orange-500">
+        <h2 className="text-3xl text-orange-500 font-extrabold ">{t("about.about")}</h2>
+        <p className="mt-4 text-xl text-orange-500 ">
           {t("about.text")}
         </p>
       </div>
@@ -65,7 +65,7 @@ const features = [
             <div className={`w-12 h-12 mb-4 mx-auto text-3xl ${feature.color}`}>
               {feature.icon}
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
+            <h3 className="text-xl font-semibold text-black mb-2">{feature.title}</h3>
             <p className="text-gray-600">{feature.description}</p>
           </div>
         ))}

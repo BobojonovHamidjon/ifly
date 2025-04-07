@@ -80,7 +80,7 @@ const ContactSection = () => {
       <div className="relative z-10 flex items-center justify-center p-4 min-h-screen">
         <div className="container mx-auto px-5">
           <div className="bg-white rounded-2xl shadow-2xl p-8 w-full">
-            <h2 className="text-4xl font-bold text-center text-gray-800 mb-8">
+            <h2 className="text-4xl font-bold text-center text-orange-500 mb-8">
               {t("contactSection.title")}
             </h2>
 
@@ -215,7 +215,7 @@ const ContactSection = () => {
               <div className="col-span-1 md:col-span-2 lg:col-span-3">
                 <button
                   type="submit"
-                  className="w-full p-4 bg-orange-500 text-white font-bold rounded-lg hover:bg-orange-600 transition duration-300"
+                  className="w-full p-4 bg-orange-500 cursor-pointer text-white font-bold rounded-lg hover:bg-orange-600 transition duration-300"
                 >
                   {t("contactSection.button")}
                 </button>
