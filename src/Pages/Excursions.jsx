@@ -1,34 +1,36 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import ContactModal from "./ContactModal";
+import ContactModal from "../Components/ContactModal";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-
+import { useTranslation } from 'react-i18next';
+import i18n from '../i18n';
 const Excursions = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
+  const { t , i18n} = useTranslation();
 
   const tourData = [
     {
-      title: "Xitoyni kashf eting",
-      description: "Sevgi  Shahrini kashf eting va  Xitoyning go'zalligidan bahramand bo'ling.",
+      title: t("excursions.title"),
+      description: t("excursions.description"),
       image: "https://www.ifly.com.uz/assets/p-1-B1MTRPEQ.jpg",
     },
     {
-      title: "Tokyo Sarguzashtlari",
-      description: "Tokyo  shahrining go'zalligidan bahramand bo'ling va  uning madaniyatini kashf eting.",
+      title: t("excursions.title2"),
+      description: t("excursions.description2"),
       image: "https://www.ifly.com.uz/assets/a-1-DbaUTjp8.jpg",
     },
     {
-      title: "Yaponiya",
-      description: "Yaponiyaning go'zalligidan bahramand bo'ling va  uning madaniyatini kashf eting.",
+      title: t("excursions.title3"),
+      description: t("excursions.description3"),
       image: "https://www.ifly.com.uz/assets/t-2-B47GAI8L.jpg",
     },
     {
-      title: "Dubai  muhlislari",
-      description: "Dubayning futuristik silueti va hashamatini ko'ring.",
+      title: t("excursions.title4"),
+      description: t("excursions.description4"),
       image: "https://www.ifly.com.uz/assets/d-1-PHDy7vV9.jpg",
     },
   ];
@@ -37,7 +39,7 @@ const Excursions = () => {
     <div className="bg-orange-500 dark:bg-gray-900 dark:text-white w-full h-auto py-20" id="tours">
       <div className="container mx-auto px-5">
         <h2 className="text-5xl font-bold text-center dark:text-orange-500 text-white mb-14">
-        Bizning Premium Turlarimizni Kashf Etish
+       {t("excursions.text")}
         </h2>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -68,7 +70,7 @@ const Excursions = () => {
           {tourData.map((tour, index) => (
             <SwiperSlide key={index}>
               <div
-                className="relative bg-center bg-cover rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300  hover:rounded-[8px] "
+                className="relative  bg-center bg-cover rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300  hover:rounded-[8px] "
                 style={{
                   backgroundImage: `url(${tour.image})`,
                   backgroundSize: 'cover',
@@ -84,9 +86,9 @@ const Excursions = () => {
                   <p className="text-gray-300 mb-6">{tour.description}</p>
                   <button
                     onClick={openModal}
-                    className="bg-orange-600 text-center inline-block text-white px-4 py-2 rounded-full duration-500 hover:bg-orange-700/60 transition-all"
+                    className="bg-orange-600 cursor-pointer text-center inline-block text-white px-4 py-2 rounded-full duration-500 hover:bg-orange-700/60 transition-all"
                   >
-                 Biz  bilan  bog'laning
+                    {t("excursions.button")}
                   </button>
                 </div>
               </div>

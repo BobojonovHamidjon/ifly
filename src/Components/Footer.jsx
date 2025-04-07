@@ -1,6 +1,11 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
+import i18n from '../i18n';
+
+
 
 const Footer = () => {
+  const { t , i18n} = useTranslation();
   return (
     <div>
         <footer className="dark:bg-gray-900 bg-orange-500 text-white py-8">
@@ -8,7 +13,7 @@ const Footer = () => {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       <div>
         <img className="w-14 h-14 mb-4" src="https://www.ifly.com.uz/assets/logo-BPA5zOgc.png" alt="Company Logo"/>
-        <p className="text-sm">Biz innovatsion sayohat yechimlari orqali ajoyib tajribalar taqdim etishga intilamiz.</p>
+        <p className="text-sm">{t("footer.title")}</p>
         <div className="mt-4 flex space-x-4">
           <a href="https://www.facebook.com" target="_blank" className="hover:text-gray-900 duration-500 transition-all ease-linear">
             <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 320 512" className="h-6 w-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -38,37 +43,37 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <h3 className='text-lg font-semibold mb-2'>Tez havolalar</h3>
+        <h3 className='text-lg font-semibold mb-2'>{t('footer.havola')}</h3>
         <ul className="space-y-2">
             <li>
                 <a href="#hero" className="hover:text-gray-900 transition-all duration-500 ease-linear dark:hover:text-orange-300">
                 </a>
                 </li>
                 <li>
-                    <a href="#about" className="hover:text-gray-900 transition-all duration-500 ease-linear dark:hover:text-orange-300">Haqida</a>
+                    <a href="#about" className="hover:text-gray-900 transition-all duration-500 ease-linear dark:hover:text-orange-300">{t('header.haqida')}</a>
                     </li>
                     <li>
-                        <a href="#" className="hover:text-gray-900 transition-all duration-500 ease-linear dark:hover:text-orange-300">Ekskursiyalar</a>
+                        <a href="#" className="hover:text-gray-900 transition-all duration-500 ease-linear dark:hover:text-orange-300">{t('header.ekskursiyalar')}</a>
                         </li>
                         </ul>
       </div>
       <div>
-      <h3 className="text-lg font-semibold mb-2">Manzillar</h3>
+      <h3 className="text-lg font-semibold mb-2">{t('footer.manzillar')}</h3>
       <ul className="space-y-2">
         <li>
-            <a href="#tour" className="hover:text-gray-900 transition-all duration-500 ease-linear dark:hover:text-orange-300">Yevropa</a>
+            <a href="#tour" className="hover:text-gray-900 transition-all duration-500 ease-linear dark:hover:text-orange-300">{t('footer.yevropa')}</a>
             </li>
             <li>
-                <a href="#" className="hover:text-gray-900 transition-all duration-500 ease-linear dark:hover:text-orange-300">Osiyo</a>
+                <a href="#" className="hover:text-gray-900 transition-all duration-500 ease-linear dark:hover:text-orange-300">{t('footer.osiyo')}</a>
                 </li>
                 <li>
-                    <a href="#" className="hover:text-gray-900 transition-all duration-500 ease-linear dark:hover:text-orange-300">Afrika</a>
+                    <a href="#" className="hover:text-gray-900 transition-all duration-500 ease-linear dark:hover:text-orange-300">{t('footer.afrika')}</a>
                     </li>
                     <li>
-                        <a href="#" className="hover:text-gray-900 transition-all duration-500 ease-linear dark:hover:text-orange-300">Avstraliya</a></li></ul>
+                        <a href="#" className="hover:text-gray-900 transition-all duration-500 ease-linear dark:hover:text-orange-300">{t('footer.avstraliya')}</a></li></ul>
       </div>
       <div>
-      <h3 className="text-lg font-semibold mb-2">Bizning manzilimiz</h3>
+      <h3 className="text-lg font-semibold mb-2">{t('footer.bizning manzillar')}</h3>
       </div>
       
 

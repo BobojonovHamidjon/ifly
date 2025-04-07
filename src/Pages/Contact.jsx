@@ -1,5 +1,5 @@
 import React from 'react'
-import ContactModal from './ContactModal'
+import ContactModal from '../Components/ContactModal'
 
 const Contact = () => {
   return (

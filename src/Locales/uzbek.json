@@ -1,9 +1,173 @@
 {
     "header": {
-        "excursions": "Ekskursiyalar",
-        "city": "Shahar",
-        "about": "Haqida",
-        "contact":"Aloqaga  chiqish"
+        "ekskursiyalar": "Ekskursiyalar",
+        "shahar": "Shahar",
+        "haqida": "Haqida",
+        "aloqaga chiqish":"Aloqaga  chiqish"
         
-    }
+    },
+  "headers" :{
+    "yaponiya":" Yaponiya",
+    "title":" Zamonaviy hayot va qadimiy an'analar mamlakati",
+    "oroldagi" :"Oroldagi dam olish",
+    "orol":"Ajoyib orol manzaralarida tinchlikni his qiling.",
+    "dubay":" Dubayni   kashf  eting",
+    "text":" Birlashgan Arab  Amirligilarida hashamat   inovatsiya va  sarguzashtlarni  kashf  eting",
+    "malakali":" Malakali  shaxar",
+    "text2":" Dunyoning   ko'ngilochar  shaharlariga   sho'ng'ing",
+    "tropik":"  Tropik   Tailand",
+    "chiroyli":" Chiroyli  piyajlarda   dam  oling  va  mazali  taomlarni  tatib  koring",
+    "turkiya":" Sehirli  Turkiya",
+    "text3":" Turkiyaning  boy  tarixi   va  ajoyib  manzaralarini  kashf   qiling"
+   },
+   "malumot":{
+    "plaj":"Hayratlanarli Plyaj",
+    "title":" Zamonaviy hayot va qadimiy an'analar mamlakati  ostida dam oling",
+    "tog'":"Tog' Sarguzashtlari",
+    "chiqish":"Hayajonli tog' sayohatiga chiqib, tabiatni o'rganing.",
+    "shahar":"Shahar Turlari"
+
+   },
+   "excursions":{
+        "text":" Bizning Premium Turlarimizni Kashf Etish",
+       "title":"Xitoyni kashf eting",
+       "description":"Sevgi  Shahrini kashf eting va  Xitoyning go'zalligidan bahramand bo'ling.",
+       "button":"Batafsil ma'lumot",
+       "title2":"Tokyo Sarguzashtlari",
+       "description2":"Tokyo  shahrining go'zalligidan bahramand bo'ling va  uning madaniyatini kashf eting.",
+       "title3":"Yaponiya",
+       "description3":"Yaponiyaning go'zalligidan bahramand bo'ling va  uning madaniyatini kashf eting.",
+       "title4":"Dubai  muhlislari",
+       "description4":"Dubayning futuristik silueti va hashamatini ko'ring."
+      
+   },
+   "city":{
+         "text":"Davlatlarni o'rganing",
+        "title":"Tokio, Yaponiya",
+        "description":"Tokio Yaponiya poytaxti bo'lib, an'anaviy ibodatxonalarni zamonaviy osmono'parlar bilan birlashtiradi.",
+        "title2":"Orol qochishi",
+        "description2":"Shahar shovqinidan uzoqda, tabiatning ajoyib go'zalligida dam oling.",
+        "title3":"Vetnam sarguzashti",
+        "description3":"Vetnamning go'zalligiga kirib boring, rang-barang guruch teraslari va noyob madaniyat bilan tanishing!",
+        "title4":"Dubai BAA",
+        "description4":"Dubayning kelajakdagi skylinesi va hashamatini guvohi bo'ling.",
+        "title5":"Maldivlar",
+        "description5":"Oq qumli plyajlar va toza suvlar bilan tropik jannatda dam oling. Hashamatli kurortlar va ajoyib suv osti dunyosidan zavq oling!",
+        "title6":"Tropik Tailand",
+        "description6":"Tailand chiroyli orollari, ko'chada oziq-ovqat va boy madaniyat merosi bilan mashhur.",
+        "title7":"Mo'jizaviy Turkiya",
+        "description7":"Turkiyaning boy tarixini va go'zal manzaralarini kashf eting.",
+        "population":"Aholi: 37.4 million",
+        "regions":"Hududlar: 23 maxsus hudud",
+        "cities":"Shaharlar: Tokio, Yokohama, Chiba",
+        "currency":"Valyuta: Yapon Yenasi (JPY)",
+        "population2":"Aholi: 500,000",
+        "regions2":"Hududlar: Turli orollar",
+        "cities2":"Shaharlar: Asosiy orol shahri, Plyaj shahri",
+        "currency2":"Valyuta: Orol Dollari (ID)",
+        "population3":"Aholi:25.7 million",
+        "regions3":"Hududlar:6  shtat, 2 hudud",
+        "cities3":"Shaharlar:Sidney, Melbourne, Perth",
+        "currency3":"Valyuta: Austral dollari (AUD)",
+        "population4":"Aholi: 3.3 million",
+        "regions4":"Hududlar: Bir nechta hudud va  tumanlar",
+        "cities4":"Shaharlar: Dubai Abu-Dabi",
+        "currency4":"Valyuta: Dirham (AED)",
+        "population5":"Aholi: 3.9 million",
+        "regions5":"Hududlar:Markaziy, Gollivud, Santa Monika",
+        "cities5":"Shaharlar:Los-Anjeles, Santa Monika, Beverly Xillz",
+        "currency5":"Valyuta: Dolar (USD)",
+        "population6":"Aholi: 69.8 million",
+        "regions6":"Hududlar: 76 viloyat",
+        "cities6":"Shaharlar:Bangkok, Chiang Mai, Phuket",
+        "currency6":"Valyuta: Baht (THB)",
+        "population7":"Aholi: 84 million",
+        "regions7":"Hududlar: 81 viloyat",
+        "cities7":"Shaharlar: Istanbul, Ankara, Izmir",
+        "currency7":"Valyuta: Lira (TRY)",
+        "button":"Batafsil ma'lumot",
+        "aloqa":"Aloqa",
+        "yopish":"Yopish"
+   },
+   "about":{
+    "about":"Komponiyamiz Haqida",
+        "text":"  20 yildan ortiq vaqt davomida noyob sayohat tajribalarini taqdim etamiz.",
+       "title":"Xalqaro Sayohat",
+       "description":"Dunyodagi eng go'zal joylarga sayohatlarni tashkil etamiz.",
+       "title2":"Qulay Mehmonxonalar",
+       "description2":"Eng yaxshi va eng qulay mehmonxonalar bilan qolaq.",
+       "title3":"Maxsus Yo'nalishlar",
+       "description3":"Har bir mijoz uchun individual yo'nalishlarni yaratamiz.",
+       "title4":"Malakali Yo'riqchilar",
+       "description4":"Malakali yo'riqchilar uchun individual yo'nalishlarni yaratamiz.",
+       "tarix":"Bizning Tariximiz",
+       "text2":"IFLY kompaniyasi tashkil etilganidan beri mijozlarga unutilmas sayohat tajribalarini taqdim etmoqda.Biz har doim eng yaxshi xizmatlarni ko'rsatishga intilamiz va mijozlarimizning istak va ehtiyojlarini e'tiborga olamiz.",
+       "batafsil":"Batafsil o'qing →",
+       "swiper":"Mijozlarimiz nima deyishadi",
+       "slider":"IFLY kompaniyasining xizmatlaridan juda mamnunman! Sayohat juda qulay va yoqimli o'tdi. Tavsiya qilaman!",
+       "name":"-Alisher",
+       "name2":"-Nigina",
+       "name3":"-Aziz",
+       "name4":"-Madina"
+       
+
+   },
+   "contact":{
+           "title":"Biz bilan bog'lanish",
+           "name":"Ismingiz",
+           "email":"Emailingiz",
+           "subject":"Mavzu",
+           "message":"Xabar",
+           "send":"Yuborish",
+           "placeholder1":"Ismingizni kiriting",
+           "placeholder2":"Emailingizni kiriting",
+           "placeholder3":"Mavzuni kiriting",
+           "placeholder4":"Xabaringizni kiriting"
+   },
+   "contactSection":{
+       "title":"Aviabiletlar bron qilish",
+       "subtitle":"To'liq ismingiz:",
+       "placeholder":"Ismingizni, otangiz ismini va familiyangizni kiriting",
+       "subtitle2":"Birinchi raqamingiz:",
+       "placeholder2":"Mobil raqamni kiriting",
+       "subtitle3":"Ikkinchi raqamingiz:",
+       "placeholder3":"Ikkinchi mobil raqamni kiriting",
+       "subtitle4":"Jo'nash sanasi:",
+       "subtitle5":"Qaytish sanasi:",
+       "suptitle6":"Email",
+       "placeholder6":"Emailingizni kiriting",
+       "suptitle7":"Telegram foydalanuvchi nomi:",
+       "placeholder7":"@username",
+       "button":"Yuborish",
+       "title2":"Qaysi davlatdan:",
+       "title3":" Qaysi davlatga:",
+       "title4":"Tanlang...",
+       "city":"Vyetnam",
+       "city2":"Taylant",
+       "city3":"Indoneziya",
+       "city4":"O'zbekiston",
+       "city5":"Janubiy Koreya",
+       "city6":"Filippin",
+       "city7":"Italiya",
+       "city8":"Yaponiya",
+       "city9":"Xitoy",
+       "city10":"Rossiya"
+      
+
+},
+   "footer":{
+       "title":"Biz innovatsion sayohat yechimlari orqali ajoyib tajribalar taqdim etishga intilamiz.",
+       "havola":"Tez Havolalar",
+       "manzillar":"Manzillar",
+       "yevropa":"Yevropa",
+       "osiyo":"Osiyo",
+       "afrika":"Afrika",
+       "avstraliya":"Avstraliya",
+       "bizning manzillar":"Bizning manzillar"
+    
+         
+
+
+   }
+   
 }

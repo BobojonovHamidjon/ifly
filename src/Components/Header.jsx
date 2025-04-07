@@ -1,39 +1,44 @@
 import React, { useState } from 'react'
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
-
 import { Swiper, SwiperSlide } from 'swiper/react'
-import ContactModal from '../Pages/ContactModal';
-import MenuModal from '../Pages/MenuModa';
+import ContactModal from './ContactModal';
+import i18n from "../i18n"
+import { useTranslation } from 'react-i18next';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { FaTimes } from 'react-icons/fa';
+
 
 
 const Header = () => {
   const [modalOpen, setModalOpen] = useState(false);
-  const [menuModalOpen, setMenuModalOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
+ 
+  
   const [selectedLang, setSelectedLang] = useState("Uzbek");
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const languages = [
     { code: "uz", label: "Uzbek" },
-    { code: "en", label: "English" },
+    { code: "eng", label: "English" },
     { code: "ru", label: "Русский" },
+    
   ];
+  const { t , i18n} = useTranslation();
 
   const handleLangChange = (lang) => {
     setSelectedLang(lang.label);
     setDropdownOpen(false);
-    
-
-    const [menuOpen, setMenuOpen] = useState(false);
-
-    const toggleMenu = () => {
-      setMenuOpen(!menuOpen);
-    };
+    i18n.changeLanguage(lang.code); 
   };
+  
   return (
+    <>
     <header className='w-full h-auto'>
       <nav className=' bg-orange-500 dark:bg-gray-900 shadow fixed w-full left-0 z-50 h-16 transition-all duration-300'>
         <div className='container mx-auto px-2'>
@@ -43,16 +48,16 @@ const Header = () => {
             </a>
             <ul className='hidden lg:flex xl:flex 2xl:flex items-center xl:w-[700px] justify-end gap-8'>
                 <li>
-                <a href="#tours" className="navbar-item hover:text-white/50 text-zinc-100 font-medium text-[22px] duration-500 dark:text-white">Ekskursiyalar</a>
+                <a href="#tours" className="navbar-item hover:text-white/50 text-zinc-100 font-medium text-[22px] duration-500 dark:text-white">{t('header.ekskursiyalar')}</a>
                 </li>
                 <li>
-                <a href="#cite" className="navbar-item hover:text-white/50 text-zinc-100 font-medium text-[22px] duration-500 dark:text-white">Shahar</a>
+                <a href="#cite" className="navbar-item hover:text-white/50 text-zinc-100 font-medium text-[22px] duration-500 dark:text-white">{t('header.shahar')}</a>
                 </li>
                 <li>
-                <a href="#about" className="navbar-item hover:text-white/50 text-zinc-100 font-medium text-[22px] duration-500 dark:text-white">Haqida</a>
+                <a href="#about" className="navbar-item hover:text-white/50 text-zinc-100 font-medium text-[22px] duration-500 dark:text-white">{t('header.haqida')}</a>
                 </li>
                 <li>
-                <button onClick={openModal} className="navbar-item hover:text-white/50 text-zinc-100 font-medium text-[22px] duration-500 dark:text-white">Aloqaga chiqish</button>
+                <button onClick={openModal} className="navbar-item hover:text-white/50 text-zinc-100 font-medium text-[22px] duration-500 dark:text-white">{t('header.aloqaga chiqish')}</button>
                 </li>
             </ul>
             <div className='flex justify-between items-center gap-5'>
@@ -77,7 +82,7 @@ const Header = () => {
    
             <button
               onClick={() => setDropdownOpen(!isDropdownOpen)}
-              className="flex items-center bg-orange-500 text-white px-4 py-2 text-sm font-medium dark:bg-gray-900 border-gray-300 rounded-md"
+              className="flex cursor-pointer items-center bg-orange-500 text-white px-4 py-2 text-sm font-medium dark:bg-gray-900 border-gray-300 rounded-md"
             >
               <span className={`fi fi-${selectedLang.toLowerCase()} mr-2`} />
               {selectedLang}
@@ -98,11 +103,16 @@ const Header = () => {
             )}
        
         </div>
+        
         <button className='text-2xl p-2 rounded-md bg-white duration-500 text-white dark:bg-white dark:text-black'><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" className="text-orange-500 dark:text-orange-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 9c1.65 0 3 1.35 3 3s-1.35 3-3 3-3-1.35-3-3 1.35-3 3-3m0-2c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 0 0 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"></path></svg></button>
-          <button    onClick={() => setMenuModalOpen(true)}
-            className='xl:hidden  md:block  sm:block lg:hidden p-2 rounded-md  bg-white text-gray-900 '>
-        <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" aria-hidden="true" className="text-2xl text-orange-500 dark:text-black " height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clipRule="evenodd"></path></svg>
-        </button>
+        <button
+  onClick={toggleMenu}
+  className="block md:hidden text-xl p-2 rounded-md bg-white dark:bg-white dark:text-black focus:outline-none shadow-md duration-500"
+>
+  {isMenuOpen ? <FaTimes /> : <GiHamburgerMenu />}
+</button>
+
+        
             </div>
             </div>
         </div>
@@ -133,10 +143,10 @@ const Header = () => {
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="absolute z-10 flex flex-col items-center justify-center h-full w-full text-center text-white px-4 sm:px-6">
             <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold mb-4 sm:mb-6">
-              Yaponiya
+            {t('headers.yaponiya')}
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8">
-              Zamonaviy hayot va qadimiy an'analar mamlakati
+            {t('headers.title')}
             </p>
           </div>
         </div>
@@ -148,10 +158,10 @@ const Header = () => {
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="absolute z-10 flex flex-col items-center justify-center h-full w-full text-center text-white px-4 sm:px-6">
             <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold mb-4 sm:mb-6">
-              Oroldagi dam olish
+            {t('headers.oroldagi')}
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8">
-              Ajoyib orol manzaralarida tinchlikni his qiling.
+            {t('headers.orol')}
             </p>
           </div>
         </div>
@@ -164,10 +174,10 @@ const Header = () => {
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="absolute z-10 flex flex-col items-center justify-center h-full w-full text-center text-white px-4 sm:px-6">
             <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold mb-4 sm:mb-6">
-           Dubayni   kashf  eting
+            {t('headers.dubay')}
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8">
-              Birlashgan Arab  Amirligilarida hashamat   inovatsiya va  sarguzashtlarni  kashf  eting
+            {t('headers.text')}
             </p>
           </div>
         </div>
@@ -180,10 +190,10 @@ const Header = () => {
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="absolute z-10 flex flex-col items-center justify-center h-full w-full text-center text-white px-4 sm:px-6">
             <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold mb-4 sm:mb-6">
-              Malakali  shaxar
+            {t('headers.malakali')}
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8">
-              Dunyoning   ko'ngilochar  shaharlariga   sho'ng'ing
+            {t('headers.text2')}
             </p>
           </div>
         </div>
@@ -196,10 +206,10 @@ const Header = () => {
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="absolute z-10 flex flex-col items-center justify-center h-full w-full text-center text-white px-4 sm:px-6">
             <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold mb-4 sm:mb-6">
-              Tropik   Tailand
+            {t('headers.tropik')}
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8">
-            Chiroyli  piyajlarda   dam  oling  va  mazali  taomlarni  tatib  koring
+            {t('headers.chiroyli')}
             </p>
           </div>
         </div>
@@ -212,10 +222,10 @@ const Header = () => {
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="absolute z-10 flex flex-col items-center justify-center h-full w-full text-center text-white px-4 sm:px-6">
             <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold mb-4 sm:mb-6">
-              Sehirli  Turkiya
+            {t('headers.turkiya')}
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8">
-             Turkiyaning  boy  tarixi   va  ajoyib  manzaralarini  kashf   qiling
+            {t('headers.text3')}
             </p>
           </div>
         </div>
@@ -227,16 +237,16 @@ const Header = () => {
   <div className='container mx-auto px-5 py-10'>
   <div className='grid gap-4 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
     <div className='bg-white dark:bg-gray-800 dark:text-white p-6 rounded-xl shadow-lg border w-full'>
-      <h3 className="text-xl font-semibold mb-4">Hayratlanarli Plyaj</h3>
-      <p className="text-zinc-400 dark:text-zinc-400">Zamonaviy plyajlarni kashf eting va quyosh <br /> ostida dam oling.</p>
+      <h3 className="text-xl font-semibold mb-4">{t('malumot.plaj')}</h3>
+      <p className="text-zinc-400 dark:text-zinc-400">{t('malumot.title')}</p>
     </div>
     <div className='bg-white dark:bg-gray-800 dark:text-white p-6 rounded-xl shadow-lg border w-full backdrop-blur-xl'>
-      <h3 className="text-xl font-semibold mb-4">Tog' Sarguzashtlari</h3>
-      <p className="text-zinc-400 dark:text-zinc-400">Hayajonli tog' sayohatiga chiqib, tabiatni o'rganing. </p>
+      <h3 className="text-xl font-semibold mb-4">{t("malumot.tog'")}</h3>
+      <p className="text-zinc-400 dark:text-zinc-400">{t('malumot.chiqish')} </p>
     </div>
     <div className='bg-white dark:bg-gray-800 dark:text-white p-6 rounded-xl shadow-lg border w-full backdrop-blur-xl'>
-      <h3 className="text-xl font-semibold mb-4">Shahar Turlari</h3>
-      <p className="text-zinc-400 dark:text-zinc-400">Hayajonli tog' sayohatiga chiqib, tabiatni o'rganing.</p>
+      <h3 className="text-xl font-semibold mb-4">{t('malumot.shahar')}</h3>
+      <p className="text-zinc-400 dark:text-zinc-400">{t('malumot.chiqish')}</p>
     </div>
   </div>
 </div>
@@ -244,8 +254,31 @@ const Header = () => {
 </div>
 
 <ContactModal isOpen={modalOpen} onClose={closeModal} />
-{menuModalOpen && <MenuModal closeModal={() => setMenuModalOpen(false)} />}
+
+
+
     </header>
+    {isMenuOpen && (
+  <div className="fixed inset-0 z-40 ">
+    <div className="fixed top-0 left-0 h-full w-3/4 max-w-xs bg-white dark:bg-gray-900 p-6 shadow-lg animate-slide-in-left z-50">
+      <ul className="flex flex-col text-white gap-6 text-lg mt-8">
+        <li><a href="#tours" onClick={toggleMenu}>{t('header.ekskursiyalar')}</a></li>
+        <li><a href="#cite" onClick={toggleMenu}>{t('header.shahar')}</a></li>
+        <li><a href="#about" onClick={toggleMenu}>{t('header.haqida')}</a></li>
+        <li>
+          <button onClick={() => {
+                    openModal();
+                    toggleMenu();
+                  }} className="text-blue-600 font-semibold">
+            {t('header.aloqaga chiqish')}
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+)}
+
+    </>
   )
 }
 

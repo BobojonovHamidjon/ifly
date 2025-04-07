@@ -1,9 +1,172 @@
 
      {
         "header": {
-            "excursions": "Excursions",
-            "city": "City",
-            "about": "About",
-            "contact": "Contact"
-        }
+            "ekskursiyalar": "Excursions",
+            "shahar": "City",
+            "haqida": "About",
+            "aloqaga chiqish": "Contact"
+        },
+        "headers": {
+  "yaponiya": "Japan",
+  "title": "The land of modern life and ancient traditions",
+  "oroldagi": "Island getaway",
+  "orol": "Feel the peace in beautiful island scenery.",
+  "dubay": "Discover Dubai",
+  "text": "Explore luxury, innovation, and adventure in the UAE",
+  "malakali": "Vibrant cities",
+  "text2": "Dive into the world’s most entertaining cities",
+  "tropik": "Tropical Thailand",
+  "chiroyli": "Relax on beautiful beaches and taste delicious food",
+  "turkiya": "Magical Turkey",
+  "text3": "Discover Turkey’s rich history and stunning landscapes"
+},
+"malumot": {
+  "plaj": "Amazing Beach",
+  "title": "Relax under the land of modern life and ancient traditions",
+  "tog'": "Mountain Adventures",
+  "chiqish": "Embark on an exciting mountain trip and explore nature.",
+  "shahar": "City Tours"
+},
+"excursions": {
+  "text": "Explore Our Premium Tours",
+  "title": "Discover China",
+  "description": "Explore the City of Love and enjoy the beauty of China.",
+  "button": "Learn More",
+  "title2": "Tokyo Adventures",
+  "description2": "Enjoy the beauty of Tokyo and discover its culture.",
+  "title3": "Japan",
+  "description3": "Enjoy the beauty of Japan and discover its culture.",
+  "title4": "Dubai Fans",
+  "description4": "See Dubai’s futuristic skyline and luxury."
+},
+"city": {
+  "text": "Explore countries",
+  "title": "Tokyo, Japan",
+  "description": "Tokyo is the capital of Japan, blending traditional temples with modern skyscrapers.",
+  "title2": "Island Escape",
+  "description2": "Relax away from the city's noise in the stunning beauty of nature.",
+  "title3": "Vietnam Adventure",
+  "description3": "Immerse yourself in Vietnam's beauty, discover vibrant rice terraces and unique culture!",
+  "title4": "Dubai, UAE",
+  "description4": "Witness Dubai’s futuristic skyline and luxury.",
+  "title5": "Maldives",
+  "description5": "Relax in a tropical paradise with white sand beaches and clear waters. Enjoy luxury resorts and vibrant marine life!",
+  "title6": "Tropical Thailand",
+  "description6": "Thailand is known for its beautiful islands, street food, and rich cultural heritage.",
+  "title7": "Magical Turkey",
+  "description7": "Discover Turkey’s rich history and stunning landscapes.",
+  "population": "Population: 37.4 million",
+  "regions": "Regions: 23 special areas",
+  "cities": "Cities: Tokyo, Yokohama, Chiba",
+  "currency": "Currency: Japanese Yen (JPY)",
+  "population2": "Population: 500,000",
+  "regions2": "Regions: Various islands",
+  "cities2": "Cities: Main Island City, Beach City",
+  "currency2": "Currency: Island Dollar (ID)",
+  "population3": "Population: 25.7 million",
+  "regions3": "Regions: 6 states, 2 territories",
+  "cities3": "Cities: Sydney, Melbourne, Perth",
+  "currency3": "Currency: Australian Dollar (AUD)",
+  "population4": "Population: 3.3 million",
+  "regions4": "Regions: Several regions and districts",
+  "cities4": "Cities: Dubai, Abu Dhabi",
+  "currency4": "Currency: Dirham (AED)",
+  "population5": "Population: 3.9 million",
+  "regions5": "Regions: Central, Hollywood, Santa Monica",
+  "cities5": "Cities: Los Angeles, Santa Monica, Beverly Hills",
+  "currency5": "Currency: Dollar (USD)",
+  "population6": "Population: 69.8 million",
+  "regions6": "Regions: 76 provinces",
+  "cities6": "Cities: Bangkok, Chiang Mai, Phuket",
+  "currency6": "Currency: Baht (THB)",
+  "population7": "Population: 84 million",
+  "regions7": "Regions: 81 provinces",
+  "cities7": "Cities: Istanbul, Ankara, Izmir",
+  "currency7": "Currency: Lira (TRY)",
+  "button": "More details",
+  "aloqa": "Contact",
+  "yopish": "Close"
+},
+"about": {
+  "about": "About Our Company",
+  "text": "We have been offering unique travel experiences for over 20 years.",
+  "title": "International Travel",
+  "description": "We organize trips to the most beautiful places in the world.",
+  "title2": "Comfortable Hotels",
+  "description2": "Stay in the best and most comfortable hotels.",
+  "title3": "Custom Routes",
+  "description3": "We create personalized routes for every client.",
+  "title4": "Qualified Guides",
+  "description4": "We offer tailored routes with experienced guides.",
+  "tarix": "Our History",
+  "text2": "Since the founding of IFLY, we have been providing unforgettable travel experiences to our clients. We always strive to offer the best service and consider our clients' desires and needs.",
+  "batafsil": "Read more →",
+  "swiper": "What our clients say",
+  "slider": "I am very pleased with IFLY’s services! The trip was very comfortable and enjoyable. Highly recommend!",
+  "name": "-Alisher",
+  "name2": "-Nigina",
+  "name3": "-Aziz",
+  "name4": "-Madina"
+},
+
+"contact": {
+  "title": "Contact Us",
+  "name": "Your Name",
+  "email": "Your Email",
+  "subject": "Subject",
+  "message": "Message",
+  "send": "Send",
+  "placeholder1": "Enter your name",
+"placeholder2": "Enter your email",
+"placeholder3": "Enter the subject",
+"placeholder4": "Enter your message"
+
+},
+"contactSection": {
+  "title": "Book Flight Tickets",
+  "subtitle": "Full Name:",
+  "placeholder": "Enter your full name including middle and last name",
+  "subtitle2": "Primary Phone Number:",
+  "placeholder2": "Enter your mobile number",
+  "subtitle3": "Secondary Phone Number:",
+  "placeholder3": "Enter your secondary mobile number",
+  "subtitle4": "Departure Date:",
+  "subtitle5": "Return Date:",
+  "suptitle6": "Email",
+  "placeholder6": "Enter your email address",
+  "suptitle7": "Telegram Username:",
+  "placeholder7": "@username",
+  "button": "Submit",
+  "title2": "From Country:",
+  "title3": "To Country:",
+  "title4": "Select...",
+  "city": "Vietnam",
+  "city2": "Thailand",
+  "city3": "Indonesia",
+  "city4": "Uzbekistan",
+  "city5": "South Korea",
+  "city6": "Philippines",
+  "city7": "Italy",
+  "city8": "Japan",
+  "city9": "China",
+  "city10": "Russia"
+},
+
+
+
+
+"footer": {
+  "title": "We strive to deliver amazing experiences through innovative travel solutions.",
+  "havola": "Quick Links",
+  "manzillar": "Destinations",
+  "yevropa": "Europe",
+  "osiyo": "Asia",
+  "afrika": "Africa",
+  "avstraliya": "Australia",
+  "bizning manzillar": "Our destinations"
+}
+
+
+
+       
     }

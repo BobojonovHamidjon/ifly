@@ -8,46 +8,49 @@ import { FaHotel, FaRoute } from "react-icons/fa";
 import { SwiperSlide, Swiper } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { Autoplay,  Pagination } from "swiper/modules";
+import { useTranslation } from 'react-i18next';
+import i18n from '../i18n';
 
 
-const features = [
-  {
-    title: "Xalqaro Sayohat",
-    description: "Dunyodagi eng go'zal joylarga sayohatlarni tashkil etamiz.",
-    icon: <IoAirplaneSharp />,
-    color: "text-blue-500",
-  },
-  {
-    title: "Qulay Mehmonxonalar",
-    description: "Eng yaxshi va eng qulay mehmonxonalar bilan qolaq.",
-    icon: <FaHotel />,
-    color: "text-green-500",
-  },
-  {
-    title: "Maxsus Yo'nalishlar",
-    description: "Har bir mijoz uchun individual yo'nalishlarni yaratamiz.",
-    icon: <FaRoute />,
-    color: "text-yellow-500",
-  },
-  {
-    title: "Malakali Yo'riqchilar",
-    description: "Har bir mijoz uchun individual yo'nalishlarni yaratamiz.",
-    icon: <BsFillPeopleFill />,
-    color: "text-purple-500",
-  },
-];
 
 function About() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+  const { t , i18n} = useTranslation();
+const features = [
+  {
+    title: t("about.title"),
+    description: t("about.description"),
+    icon: <IoAirplaneSharp />,
+    color: "text-blue-500",
+  },
+  {
+    title: t("about.title2"),
+    description: t("about.description2"),
+    icon: <FaHotel />,
+    color: "text-green-500",
+  },
+  {
+    title: t("about.title3"),
+    description: t("about.description3"),
+    icon: <FaRoute />,
+    color: "text-yellow-500",
+  },
+  {
+    title: t("about.title4"),
+    description: t("about.description4"),
+    icon: <BsFillPeopleFill />,
+    color: "text-purple-500",
+  },
+];
 
   return (
     <section className="bg-orange-500 dark:bg-gray-900 py-16 px-4 sm:px-6 lg:px-8" id="about">
       <div className="max-w-7xl mx-auto text-center" data-aos="fade-up">
-        <h2 className="text-3xl font-extrabold dark:text-orange-500 text-white sm:text-4xl">Kompaniyamiz Haqida</h2>
+        <h2 className="text-3xl font-extrabold dark:text-orange-500 text-white sm:text-4xl">{t("about.about")}</h2>
         <p className="mt-4 text-xl text-white dark:text-orange-500">
-          20 yildan ortiq vaqt davomida noyob sayohat tajribalarini taqdim etamiz.
+          {t("about.text")}
         </p>
       </div>
 
@@ -78,20 +81,19 @@ function About() {
             />
           </div>
           <div className="p-8 md:w-2/3">
-            <h3 className="text-sm text-indigo-500 font-semibold uppercase">Bizning Tariximiz</h3>
+            <h3 className="text-sm text-indigo-500 font-semibold uppercase">{t("about.tarix")}</h3>
             <p className="mt-2 text-gray-600">
-              IFLY kompaniyasi tashkil etilganidan beri mijozlarga unutilmas sayohat tajribalarini taqdim etmoqda.
-              Biz har doim eng yaxshi xizmatlarni ko'rsatishga intilamiz va mijozlarimizning istak va ehtiyojlarini e'tiborga olamiz.
+              {t("about.text2")}
             </p>
             <div className="mt-4">
-              <a href="#" className="text-indigo-500 hover:text-indigo-600 font-medium">Batafsil o'qing →</a>
+              <a href="#" className="text-indigo-500 hover:text-indigo-600 font-medium">{t("about.batafsil")}</a>
             </div>
           </div>
         </div>
       </div>
 
       <div className="mt-16">
-        <h2 className="text-4xl text-center mb-16 text-orange-500 font-bold">Mijozlarimiz nima deyishadi</h2>
+        <h2 className="text-4xl text-center mb-16 text-orange-500 font-bold">{t("about.swiper")}</h2>
         <Swiper
           modules={[ Pagination, Autoplay]}
           spaceBetween={20} 
@@ -117,26 +119,26 @@ function About() {
         >
           <SwiperSlide>
             <div className="p-6 bg-white shadow-md rounded-lg">
-              <p className="text-gray-600 italic">"IFLY kompaniyasining xizmatlaridan juda mamnunman! Sayohat juda qulay va yoqimli o'tdi. Tavsiya qilaman!"</p>
-              <p className="mt-4 text-gray-800 font-semibold">Mirzaev Alisher</p>
+              <p className="text-gray-600 italic">{t("about.slider")}</p>
+              <p className="mt-4 text-gray-800 font-semibold">{t("about.name")}</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="p-6 bg-white shadow-md rounded-lg">
-              <p className="text-gray-600 italic">"IFLY kompaniyasining xizmatlaridan juda mamnunman! Sayohat juda qulay va yoqimli o'tdi. Tavsiya qilaman!"</p>
-              <p className="mt-4 text-gray-800 font-semibold">Mirzaev Alisher</p>
+              <p className="text-gray-600 italic">{t("about.slider")}</p>
+              <p className="mt-4 text-gray-800 font-semibold">{t("about.name2")}</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="p-6 bg-white shadow-md rounded-lg">
-              <p className="text-gray-600 italic">"IFLY kompaniyasining xizmatlaridan juda mamnunman! Sayohat juda qulay va yoqimli o'tdi. Tavsiya qilaman!"</p>
-              <p className="mt-4 text-gray-800 font-semibold">Mirzaev Alisher</p>
+              <p className="text-gray-600 italic">{t("about.slider")}</p>
+              <p className="mt-4 text-gray-800 font-semibold">{t("about.name3")}</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="p-6 bg-white shadow-md rounded-lg">
-              <p className="text-gray-600 italic">"IFLY kompaniyasining xizmatlaridan juda mamnunman! Sayohat juda qulay va yoqimli o'tdi. Tavsiya qilaman!"</p>
-              <p className="mt-4 text-gray-800 font-semibold">Mirzaev Alisher</p>
+              <p className="text-gray-600 italic">{t("about.slider")}</p>
+              <p className="mt-4 text-gray-800 font-semibold">{t("about.name4")}</p>
             </div>
           </SwiperSlide>
         </Swiper>
