@@ -126,7 +126,7 @@ const ContactModal = ({ isOpen, onClose }) => {
               value={formData.message}
               onChange={handleChange}
               rows="4"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none"
               required
             ></textarea>
           </div>
