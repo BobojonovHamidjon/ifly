@@ -87,7 +87,11 @@
         "currency7":"Valyuta: Lira (TRY)",
         "button":"Batafsil ma'lumot",
         "aloqa":"Aloqa",
-        "yopish":"Yopish"
+        "yopish":"Yopish",
+        "popula":"Aholi:",
+        "hudud":"Hududlar:",
+        "shahar":"Shaharlar:",
+        "valyuta":"Valyuta:"
    },
    "about":{
     "about":"Komponiyamiz Haqida",

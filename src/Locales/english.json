@@ -85,7 +85,13 @@
   "currency7": "Currency: Lira (TRY)",
   "button": "More details",
   "aloqa": "Contact",
-  "yopish": "Close"
+  "yopish": "Close",
+    "popula": "Population:",
+    "hudud": "Regions:",
+    "shahar": "Cities:",
+    "valyuta": "Currency:"
+  
+  
 },
 "about": {
   "about": "About Our Company",

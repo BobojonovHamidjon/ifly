@@ -131,10 +131,10 @@ const Cite = () => {
       <p className="mb-4 text-gray-300">{selectedTour.description}</p>
 
       <div className="text-left text-sm space-y-1 mb-6">
-        <p><strong className="text-white">Aholi:</strong> {selectedTour.population}</p>
-        <p><strong className="text-white">Hududlar:</strong> {selectedTour.regions}</p>
-        <p><strong className="text-white">Shaharlar:</strong> {selectedTour.cities}</p>
-        <p><strong className="text-white">Valyuta:</strong> {selectedTour.currency}</p>
+        <p><strong className="text-white">{t("city.popula")}</strong> {selectedTour.population}</p>
+        <p><strong className="text-white">{t("city.hudud")}</strong> {selectedTour.regions}</p>
+        <p><strong className="text-white">{t("city.shahar")}</strong> {selectedTour.cities}</p>
+        <p><strong className="text-white">{t("city.valyuta")}</strong> {selectedTour.currency}</p>
       </div>
 
       <div className="flex justify-center gap-4">
