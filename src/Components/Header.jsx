@@ -7,6 +7,8 @@ import i18n from "../i18n"
 import { useTranslation } from 'react-i18next';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { FaTimes } from 'react-icons/fa';
+import 'flag-icons/css/flag-icons.min.css';
+
 
 
 
@@ -19,9 +21,9 @@ const Header = () => {
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
  
-  
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const [selectedLang, setSelectedLang] = useState('UZ'); // default
+  const [selectedLang, setSelectedLang] = useState('uz');
+  const { t, i18n } = useTranslation();
   useEffect(() => {
     const savedLang = localStorage.getItem('language') || 'uz';
     setSelectedLang(savedLang.toUpperCase());
@@ -30,12 +32,10 @@ const Header = () => {
 
   const languages = [
     { code: "uz", label: "Uzbek" },
-    { code: "eng", label: "English" },
+    { code: "gb", label: "English" },
     { code: "ru", label: "Русский" },
-    
   ];
-  const { t , i18n} = useTranslation();
-
+  
   const handleLangChange = (lang) => {
     i18n.changeLanguage(lang.code);
     localStorage.setItem('language', lang.code);
@@ -84,29 +84,32 @@ const Header = () => {
             <a href="https://www.youtube.com" target="_blink" className="hover:text-white/50 dark:hover:text-orange-500 text-white duration-500 transition-all ease-linear "><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 576 512" className="h-6 w-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg></a>
             </li>
         </ol>
-        <div className='relative inline-block text-left'>
-      <button
-        onClick={() => setDropdownOpen(!isDropdownOpen)}
-        className="flex cursor-pointer items-center text-white px-4 py-2 text-sm font-medium bg-gray-900 border-gray-300 rounded-md"
-      >
-        <span className={`fi fi-${selectedLang.toLowerCase()} mr-2`} />
-        {languages.find((l) => l.code.toUpperCase() === selectedLang)?.label}
-      </button>
+        <div className="relative inline-block text-left">
+  <button
+    onClick={() => setDropdownOpen(!isDropdownOpen)}
+    className="flex cursor-pointer items-center text-white px-4 py-2 text-sm font-medium bg-gray-900   rounded-md"
+  >
+   
+    <span className={`fi fi-${selectedLang.toLowerCase()} mr-2`} />
+    {languages.find((l) => l.code.toUpperCase() === selectedLang)?.label}
+  </button>
 
-      {isDropdownOpen && (
-        <ul className="absolute right-0 mt-2 w-32 bg-white border border-gray-300 rounded-md shadow-lg dark:bg-gray-800">
-          {languages.map((lang) => (
-            <li
-              key={lang.code}
-              onClick={() => handleLangChange(lang)}
-              className="px-4 py-2 text-gray-700 hover:bg-gray-200 cursor-pointer dark:text-white dark:hover:bg-gray-700"
-            >
-              {lang.label}
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
+  {isDropdownOpen && (
+    <ul className="absolute right-0 mt-2 w-40 bg-white   rounded-md shadow-lgbg-gray-800 z-50">
+      {languages.map((lang) => (
+        <li
+          key={lang.code}
+          onClick={() => handleLangChange(lang)}
+          className="flex items-center gap-2 px-4 py-2 text-black  cursor-pointer"
+        >
+          <span className={`fi fi-${lang.code.toLowerCase()}`} />
+          {lang.label}
+        </li>
+      ))}
+    </ul>
+  )}
+</div>
+
        
         <button
   onClick={toggleMenu}

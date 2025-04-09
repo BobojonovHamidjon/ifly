@@ -5,7 +5,8 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import uz from "./Locales/uzbek.json";
 import ru from "./Locales/russian.json";
 import en from "./Locales/english.json";
-
+const savedLang = localStorage.getItem('language') || 'uz';
+ 
 i18n
 
   .use(LanguageDetector)
@@ -13,6 +14,7 @@ i18n
   .init({
     fallbackLng: 'en',
     debug: true,
+    lng:savedLang,
     resources: { 
       uz: { translation: uz },
       ru: { translation: ru },

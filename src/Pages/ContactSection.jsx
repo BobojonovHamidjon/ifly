@@ -76,7 +76,7 @@ const ContactSection = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-gray-100">
-      <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
+ 
       <div className="relative z-10 flex items-center justify-center p-4 min-h-screen">
         <div className="container mx-auto px-5">
           <div className="bg-white rounded-2xl shadow-2xl p-8 w-full">

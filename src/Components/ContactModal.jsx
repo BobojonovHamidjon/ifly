@@ -3,6 +3,7 @@ import { FaTimes } from "react-icons/fa";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
+import "react-toastify/dist/ReactToastify.css";
 import i18n from "../i18n";
 
 
@@ -68,7 +69,7 @@ const ContactModal = ({ isOpen, onClose }) => {
         className="bg-white rounded-2xl shadow-2xl p-6 w-full max-w-md relative text-black"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Close Button */}
+    
         <button
           onClick={onClose}
           className="absolute top-3 right-3 text-white p-2 rounded-[6px] text-xl font-bold bg-amber-600"
