@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -20,8 +20,13 @@ const Header = () => {
   const closeModal = () => setModalOpen(false);
  
   
-  const [selectedLang, setSelectedLang] = useState("Uzbek");
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [selectedLang, setSelectedLang] = useState('UZ'); // default
+  useEffect(() => {
+    const savedLang = localStorage.getItem('language') || 'uz';
+    setSelectedLang(savedLang.toUpperCase());
+  }, []);
+  
 
   const languages = [
     { code: "uz", label: "Uzbek" },
@@ -32,11 +37,12 @@ const Header = () => {
   const { t , i18n} = useTranslation();
 
   const handleLangChange = (lang) => {
-    setSelectedLang(lang.label);
+    i18n.changeLanguage(lang.code);
+    localStorage.setItem('language', lang.code);
+    setSelectedLang(lang.code.toUpperCase());
     setDropdownOpen(false);
-    i18n.changeLanguage(lang.code); 
   };
-  
+
   return (
     <>
     <header className='w-full h-auto'>
@@ -79,31 +85,28 @@ const Header = () => {
             </li>
         </ol>
         <div className='relative inline-block text-left'>
-   
-            <button
-              onClick={() => setDropdownOpen(!isDropdownOpen)}
-              className="flex cursor-pointer items-center  text-white px-4 py-2 text-sm font-medium bg-gray-900 border-gray-300 rounded-md"
-            >
-              <span className={`fi fi-${selectedLang.toLowerCase()} mr-2`} />
-              {selectedLang}
-            </button>
+      <button
+        onClick={() => setDropdownOpen(!isDropdownOpen)}
+        className="flex cursor-pointer items-center text-white px-4 py-2 text-sm font-medium bg-gray-900 border-gray-300 rounded-md"
+      >
+        <span className={`fi fi-${selectedLang.toLowerCase()} mr-2`} />
+        {languages.find((l) => l.code.toUpperCase() === selectedLang)?.label}
+      </button>
 
-            {isDropdownOpen && (
-              <ul className="absolute right-0 mt-2 w-32 bg-white border border-gray-300 rounded-md shadow-lg dark:bg-gray-800">
-                {languages.map((lang) => (
-                  <li
-                    key={lang.code}
-                    onClick={() => handleLangChange(lang)}
-                    className="px-4 py-2 text-gray-700 hover:bg-gray-200 cursor-pointer dark:text-white dark:hover:bg-gray-700"
-                  >
-                    {lang.label}
-                  </li>
-                ))}
-              </ul>
-            )}
-       
-        </div>
-        
+      {isDropdownOpen && (
+        <ul className="absolute right-0 mt-2 w-32 bg-white border border-gray-300 rounded-md shadow-lg dark:bg-gray-800">
+          {languages.map((lang) => (
+            <li
+              key={lang.code}
+              onClick={() => handleLangChange(lang)}
+              className="px-4 py-2 text-gray-700 hover:bg-gray-200 cursor-pointer dark:text-white dark:hover:bg-gray-700"
+            >
+              {lang.label}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
        
         <button
   onClick={toggleMenu}
